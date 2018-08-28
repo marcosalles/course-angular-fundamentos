@@ -1,7 +1,2 @@
-<h1>{{ title }}</h1>
-
-<pic-photo
-    *ngFor="let photo of photos"
-    [url]="photo.url"
-    [description]="photo.description">
-</pic-photo>
+<pic-header></pic-header>
+<router-outlet></router-outlet>
