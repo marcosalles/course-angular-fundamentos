@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
-import { RequestInterceptor } from './auth/request.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+
+import { RequestInterceptor } from './auth/request.interceptor';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   imports: [
@@ -11,10 +13,12 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     RouterModule
   ],
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   providers: [
     {

@@ -22,4 +22,12 @@ export class PhotoService {
         { params: params }
       );
   }
+
+  upload(file: File, description: string, allowComments: boolean) {
+    const formData = new FormData();
+    formData.append('description', description);
+    formData.append('allowComments', allowComments.toString());
+    formData.append('imageFile', file);
+    return this.http.post(this.api.POST.uploadPhoto(), formData);
+  }
 }
