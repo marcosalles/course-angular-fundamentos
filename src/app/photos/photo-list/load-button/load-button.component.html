@@ -1,0 +1,8 @@
+<div *ngIf="hasMore; else noMore"
+    class="text-center">
+  <button class="btn btn-primary">Load more</button>
+</div>
+
+<ng-template #noMore>
+  <p class="text-center text-muted">No more photos to load</p>
+</ng-template>

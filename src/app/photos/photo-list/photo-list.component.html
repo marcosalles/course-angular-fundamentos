@@ -1,0 +1,11 @@
+<pic-search
+    [query]="filter"
+    (onTyping)="filter = $event">
+</pic-search>
+
+<pic-photos [photos]="photos | filterByDescription: filter"></pic-photos>
+
+<pic-load-button
+    [hasMore]="hasMore"
+    (click)="load()"
+></pic-load-button>

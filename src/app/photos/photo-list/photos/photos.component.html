@@ -1,0 +1,17 @@
+<p *ngIf="!photos.length"
+    class="text-center text-muted">
+    Sorry, no photos
+</p>
+
+<ul class="list-unstyled">
+    <li *ngFor="let cols of rows"
+        class="row no-gutters">
+        <div *ngFor="let photo of cols"
+            picDarkenOnHover brightness="90"
+            class="col-4">
+            <pic-card>
+                <pic-photo [photo]="photo"></pic-photo>
+            </pic-card>
+        </div>
+    </li>
+</ul>
